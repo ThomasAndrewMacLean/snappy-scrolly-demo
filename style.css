@@ -1,0 +1,132 @@
+:root {
+  --body-padding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+p {
+  line-height: 1.8;
+}
+body {
+  padding: var(--body-padding);
+  font-family: Arial, Helvetica, sans-serif
+}
+h2 {
+  margin-block: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+}
+
+img {
+  max-width: 100%;
+  height: 100px;
+}
+
+li {
+  border: 1px solid #ccc;
+}
+
+li h3 {
+  padding: 1rem;
+}
+
+li p {
+  padding-inline: 1rem;
+  padding-bottom: 2rem;
+}
+
+button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+body:has(#flexie:checked) ul {
+  list-style: none;
+  display: flex;
+  overflow: auto;
+  gap: 10px;
+}
+
+body:has(#cards:checked) ul li {
+  border-radius: 10px;
+  overflow: clip;
+  min-width: 200px;
+}
+
+body:has(#shadow:checked) ul li {
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 8px 0px rgba(153, 133, 186, 0.5);
+}
+body:has(#padding-block:checked) ul {
+  padding-block: 10px;
+}
+
+body:has(#full-width:checked) ul {
+  margin-left: calc(var(--body-padding) * -1);
+  margin-right: calc(var(--body-padding) * -1);
+  padding-left: var(--body-padding);
+  padding-right: var(--body-padding);
+}
+body:has(#snappy:checked) ul {
+  scroll-snap-type: x mandatory;
+}
+
+body:has(#snappy:checked) ul li {
+  scroll-snap-align: start;
+}
+body:has(#snappy-padding:checked) ul {
+  scroll-padding-inline: var(--body-padding);
+}
+
+body:has(#smooth:checked) ul {
+  scroll-behavior: smooth;
+}
+
+body:has(#hide-scrollbar:checked) ul {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+body:has(#hide-scrollbar:checked) ul::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.buttons {
+  display: none;
+}
+body:has(#showbuttons:checked) .buttons {
+  display: block;
+}
+.inputs{
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  background-color: black;
+  color: greenyellow;
+}
+@media screen and (max-width: 600px) {
+  body:has(#mobileCenter:checked) ul {
+    scroll-padding-inline: 0;
+  }
+  body:has(#mobileCenter:checked) ul li {
+    scroll-snap-align: center;
+  }
+
+  body:has(#mobileCenter:checked) ul li:first-child {
+    margin-left: 300px;
+  }
+  body:has(#mobileCenter:checked) ul li:last-child {
+    margin-right: 300px;
+  }
+}
