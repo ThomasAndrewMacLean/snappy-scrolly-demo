@@ -22,47 +22,80 @@
       williamsburg.
     </p>
     <div class="inputs">
-      <div class="input">
+      <div
+        data-info="Gebruiken flex om alles op rijtje te zetten, geen list style, overflow auto, kleine gap."
+        class="input"
+      >
         <input type="checkbox" name="flexie" id="flexie" />
         <label for="flexie">Flexie</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Geven li's border-radius, overflow clip voor de image af te knippen, en min-width 200px."
+        class="input"
+      >
         <input type="checkbox" name="cards" id="cards" />
         <label for="cards">Cards</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Halen de border van de kaarten en gebruiken box-shadow in de plaats."
+        class="input"
+      >
         <input type="checkbox" name="shadow" id="shadow" />
         <label for="shadow">Shadow</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Maar door overflow: auto is dat lelijk, dus voegen wat padding-block toe zodat we de schaduw blijven zien."
+        class="input"
+      >
         <input type="checkbox" name="padding-block" id="padding-block" />
         <label for="padding-block">Padding-block</label>
       </div>
-      <div class="input">
+      <div
+        data-info="We voegen wat negatieve margin toe links en rechts zodat onze UL tot aan de rand gaat, en evenveel padding zodat lijst wel op zelfde plaats blijft staan."
+        class="input"
+      >
         <input type="checkbox" name="full-width" id="full-width" />
         <label for="full-width">Full-width</label>
       </div>
-      <div class="input">
+      <div
+        data-info="We geven ul 'scroll-snap-typ':x mandatory; en de li's 'scroll-snap-align':start."
+        class="input"
+      >
         <input type="checkbox" name="snappy" id="snappy" />
         <label for="snappy">Snappy</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Maar dit 'trekt' de lijst naar de rand, dus geven we ook een scroll-padding-inline om dit te compenseren. (gebruik overal dezelfde css variabele)."
+        class="input"
+      >
         <input type="checkbox" name="snappy-padding" id="snappy-padding" />
         <label for="snappy-padding">Snappy-padding</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Designers haten scrollbars, dus we halen deze hier weg."
+        class="input"
+      >
         <input type="checkbox" name="hide-scrollbar" id="hide-scrollbar" />
         <label for="hide-scrollbar">Hide-scrollbar</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Dit geeft echter problemen voor gebruikers zonder touchpad die kunnen swipen, dus voegen we knopjes toe die doorheen de lijst gaan met wat javascript (alternatief is via JS draggen door de lijst)."
+        class="input"
+      >
         <input type="checkbox" name="showbuttons" id="showbuttons" />
         <label for="showbuttons">Showbuttons</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Laatste probleem: dit gaat in schokken, dus voegen we wat css toe die deze transities 'smooth' laten verlopen."
+        class="input"
+      >
         <input type="checkbox" name="smooth" id="smooth" />
         <label for="smooth">Smooth</label>
       </div>
-      <div class="input">
+      <div
+        data-info="Laatste iets dat soms wenselijk kan zijn: de LI's niet laten snappen in begin maar in center. Kan mooier zijn op gsm's. We passen de snapp align aan, maar geven ook genoeg extra margin aan eerste en laatste LI zodat deze tot in centrum geraken."
+        class="input"
+      >
         <input type="checkbox" name="mobileCenter" id="mobileCenter" />
         <label for="mobileCenter">MobileCenter</label>
       </div>
@@ -70,7 +103,7 @@
 
     <ul class="">
       <li>
-        <img src="https://picsum.photos/200/100" alt="" />
+        <img src="https://picsum.photos/700/400" alt="" />
         <h3>Hello 1</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -78,7 +111,7 @@
         </p>
       </li>
       <li>
-        <img src="https://picsum.photos/201/100" alt="" />
+        <img src="https://picsum.photos/701/400" alt="" />
         <h3>Hello 2</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -86,7 +119,7 @@
         </p>
       </li>
       <li>
-        <img src="https://picsum.photos/202/100" alt="" />
+        <img src="https://picsum.photos/702/400" alt="" />
         <h3>Hello 3</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -94,7 +127,7 @@
         </p>
       </li>
       <li>
-        <img src="https://picsum.photos/203/100" alt="" />
+        <img src="https://picsum.photos/703/400" alt="" />
         <h3>Hello 4</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -102,7 +135,7 @@
         </p>
       </li>
       <li>
-        <img src="https://picsum.photos/204/100" alt="" />
+        <img src="https://picsum.photos/704/400" alt="" />
         <h3>Hello 5</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -111,7 +144,7 @@
       </li>
 
       <li>
-        <img src="https://picsum.photos/205/100" alt="" />
+        <img src="https://picsum.photos/705/400" alt="" />
         <h3>Hello 6</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -119,7 +152,7 @@
         </p>
       </li>
       <li>
-        <img src="https://picsum.photos/206/100" alt="" />
+        <img src="https://picsum.photos/706/400" alt="" />
         <h3>Hello 7</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -127,7 +160,7 @@
         </p>
       </li>
       <li>
-        <img src="https://picsum.photos/207/100" alt="" />
+        <img src="https://picsum.photos/707/400" alt="" />
         <h3>Hello 8</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -135,7 +168,7 @@
         </p>
       </li>
       <li>
-        <img src="https://picsum.photos/208/100" alt="" />
+        <img src="https://picsum.photos/708/400" alt="" />
         <h3>Hello 9</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -144,35 +177,39 @@
       </li>
 
       <li>
-        <img src="https://picsum.photos/209/100" alt="" />
+        <img src="https://picsum.photos/709/400" alt="" />
         <h3>Hello 10</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           quos.
         </p>
-      </li>  <li>
-        <img src="https://picsum.photos/210/100" alt="" />
+      </li>
+      <li>
+        <img src="https://picsum.photos/710/400" alt="" />
         <h3>Hello 11</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           quos.
         </p>
-      </li>  <li>
-        <img src="https://picsum.photos/211/100" alt="" />
+      </li>
+      <li>
+        <img src="https://picsum.photos/711/400" alt="" />
         <h3>Hello 12</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           quos.
         </p>
-      </li>  <li>
-        <img src="https://picsum.photos/212/100" alt="" />
+      </li>
+      <li>
+        <img src="https://picsum.photos/712/400" alt="" />
         <h3>Hello 13</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           quos.
         </p>
-      </li>  <li>
-        <img src="https://picsum.photos/213/100" alt="" />
+      </li>
+      <li>
+        <img src="https://picsum.photos/713/400" alt="" />
         <h3>Hello 14</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -213,6 +250,12 @@
       taxidermy adaptogen aesthetic before they sold out.
     </p>
 
+    <footer>
+      <p>
+        Made with <span class="heart">♥</span> by
+        <a target="_blank" href="https://thomasmaclean.be">Thomas MacLean</a>
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

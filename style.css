@@ -16,7 +16,7 @@ p {
 }
 body {
   padding: var(--body-padding);
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 h2 {
   margin-block: 2rem;
@@ -28,7 +28,9 @@ ul {
 
 img {
   max-width: 100%;
-  height: 100px;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
 }
 
 li {
@@ -107,7 +109,39 @@ body:has(#hide-scrollbar:checked) ul::-webkit-scrollbar {
 body:has(#showbuttons:checked) .buttons {
   display: block;
 }
-.inputs{
+
+body:has(#mobileCenter:checked) {
+  width: 100vw;
+  max-width: 500px;
+  background-color: white;
+  margin: 0 auto;
+}
+html:has(#mobileCenter:checked) {
+  background-color: black;
+}
+
+body:has(#mobileCenter:checked) ul {
+  scroll-padding-inline: 0;
+  gap: 30px;
+}
+body:has(#mobileCenter:checked) ul li {
+  scroll-snap-align: center;
+  min-width: 75%;
+}
+
+body:has(#mobileCenter:checked) ul li img {
+  height: 300px;
+}
+
+body:has(#mobileCenter:checked) ul li:first-child {
+  margin-left: 300px;
+}
+body:has(#mobileCenter:checked) ul li:last-child {
+  margin-right: 300px;
+}
+
+
+.inputs {
   position: fixed;
   top: 0;
   right: 0;
@@ -115,18 +149,26 @@ body:has(#showbuttons:checked) .buttons {
   background-color: black;
   color: greenyellow;
 }
-@media screen and (max-width: 600px) {
-  body:has(#mobileCenter:checked) ul {
-    scroll-padding-inline: 0;
-  }
-  body:has(#mobileCenter:checked) ul li {
-    scroll-snap-align: center;
-  }
 
-  body:has(#mobileCenter:checked) ul li:first-child {
-    margin-left: 300px;
-  }
-  body:has(#mobileCenter:checked) ul li:last-child {
-    margin-right: 300px;
-  }
+[data-info]:hover::after {
+  content: attr(data-info);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: black;
+  max-width: 50vw;
+}
+
+footer{
+  background-color: rgb(242, 190, 216);
+  
+  margin: calc(var(--body-padding) * -1);
+  margin-top: 5rem;
+  height: calc(var(--body-padding) * 5);
+  display: flex;
+  font-family: monospace;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
